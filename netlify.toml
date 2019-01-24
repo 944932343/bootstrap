@@ -1,2 +1,5 @@
 [context."v4-dev-xmr-hugo-2"]
   command = "npm run dist && npm run release-sri && npm run docs-production"
+
+[context.deploy-preview]
+  command = "npm run dist && npm run release-sri && npm run docs-production -- --baseURL $DEPLOY_PRIME_URL"
